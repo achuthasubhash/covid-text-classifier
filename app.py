@@ -17,10 +17,10 @@ def predict(text):
     text=[text]
     text=cv.transform(text).toarray()
     prediction=classifier.predict(text)
-    if prediction==0:
-        prediction="This is normal text"
-    else:
+    if prediction==1:
         prediction="This text regrading covid-19"
+    else:
+        prediction="This text normal test"
     return prediction
 
 
