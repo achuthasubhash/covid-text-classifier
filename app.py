@@ -10,9 +10,9 @@ import pickle
 import pandas as pd
 import streamlit as st 
 from PIL import Image
-filename = 'covid-text-model.pkl'
+filename = 'covid1-text-model.pkl'
 classifier = pickle.load(open(filename, 'rb'))
-cv=pickle.load(open('cv-transform.pkl','rb'))
+cv=pickle.load(open('tfidf-transform.pkl','rb'))
 def predict(text):
     text=[text]
     text=cv.transform(text).toarray()
